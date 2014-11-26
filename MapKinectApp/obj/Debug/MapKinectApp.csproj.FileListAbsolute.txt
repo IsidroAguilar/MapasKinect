@@ -1,1 +1,2 @@
 C:\Users\Isidro Aguilar\Documents\Visual Studio 2013\Projects\MapKinectApp\MapKinectApp\bin\Debug\MapKinectApp.exe.config
+C:\Users\Javier\Source\Repos\MapasKinect\MapKinectApp\bin\Debug\MapKinectApp.exe.config
