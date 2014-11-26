@@ -15,6 +15,7 @@ namespace MapKinectApp
         public Form1()
         {
             InitializeComponent();
+
         }
     }
 }
