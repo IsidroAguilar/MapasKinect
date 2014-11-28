@@ -22,7 +22,7 @@ namespace MapKinectApp
 
         #region Variable Globales
 
-        KinectSensor sensor = new KinectSensor();
+        private KinectSensor sensor;
         Skeleton[] Skeletons;
         int i = 0;
         int shoulderA = 0;
@@ -63,7 +63,7 @@ namespace MapKinectApp
             Bitmap bmap = ImageToBitmap(VFrame);
             //Graphics g = Graphics.FromImage(bmap);
             //g.DrawEllipse(Pens.Red, new Rectangle(x - 10, y - 10, 20, 20));
-            imgMapa.Image = bmap;
+            //imgMapa.Image = bmap;
 
             SkeletonFrame SFrame = e.OpenSkeletonFrame();
             if (SFrame == null) return;
@@ -75,7 +75,7 @@ namespace MapKinectApp
                 if (unSkeleton.TrackingState == SkeletonTrackingState.Tracked)
                 {
                     lblShoulderPosition.Text = "X:" +
-                        unSkeleton.Joints[JointType.ShoulderRight].Position.X.ToString()
+                        (unSkeleton.Joints[JointType.ShoulderRight].Position.X.ToString()
                         + " Y:" + unSkeleton.Joints[JointType.ShoulderRight].Position.Y.ToString() + " Z:"
                         + unSkeleton.Joints[JointType.ShoulderRight].Position.Y.ToString();
                     lblMensaje.Text = "Mueve..." + i++;
@@ -85,6 +85,29 @@ namespace MapKinectApp
                     Sloc = unSkeleton.Joints[JointType.HandLeft].Position;
                     Cloc = sensor.MapSkeletonPointToColor(Sloc, ColorImageFormat.RgbResolution640x480Fps30);
                     markAtPoint(Cloc, bmap);
+
+                    //Creamos el punto
+                    Graphics objDibuja;
+                    objDibuja = imgMapa.CreateGraphics();
+                    //Se crea una nueva pluma con un grosor de 2 y el color indicado
+                    var brocha = new SolidBrush(Color.Red);
+                    var x = unSkeleton.Joints[JointType.ShoulderRight].Position.X;
+                    var y = unSkeleton.Joints[JointType.ShoulderRight].Position.Y;
+                    var z = unSkeleton.Joints[JointType.ShoulderRight].Position.Y;
+
+                    if (Convert.ToInt16(z) <= .20)
+                    {
+                        if (x < 0)
+                            x *= -1;
+                        if (y < 0)
+                            y *= -1;
+                        objDibuja.FillEllipse(brocha,
+                            new Rectangle(new Point(Convert.ToInt16((x))*550, Convert.ToInt16(y)*550), new Size(10, 10)));
+                    }
+                    //////
+
+
+
                     //imgMapa.Image = bmap;
                 }
 

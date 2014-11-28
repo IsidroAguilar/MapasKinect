@@ -1,2 +1,11 @@
 C:\Users\Isidro Aguilar\Documents\Visual Studio 2013\Projects\MapKinectApp\MapKinectApp\bin\Debug\MapKinectApp.exe.config
 C:\Users\Javier\Source\Repos\MapasKinect\MapKinectApp\bin\Debug\MapKinectApp.exe.config
+E:\5 semestre\Modelado\3P\MapasKinect\MapKinectApp\bin\Debug\MapKinectApp.exe.config
+E:\5 semestre\Modelado\3P\MapasKinect\MapKinectApp\obj\Debug\MapKinectApp.csprojResolveAssemblyReference.cache
+E:\5 semestre\Modelado\3P\MapasKinect\MapKinectApp\obj\Debug\MapKinectApp.Form1.resources
+E:\5 semestre\Modelado\3P\MapasKinect\MapKinectApp\obj\Debug\MapKinectApp.Properties.Resources.resources
+E:\5 semestre\Modelado\3P\MapasKinect\MapKinectApp\obj\Debug\MapKinectApp.csproj.GenerateResource.Cache
+E:\5 semestre\Modelado\3P\MapasKinect\MapKinectApp\bin\Debug\MapKinectApp.exe
+E:\5 semestre\Modelado\3P\MapasKinect\MapKinectApp\bin\Debug\MapKinectApp.pdb
+E:\5 semestre\Modelado\3P\MapasKinect\MapKinectApp\obj\Debug\MapKinectApp.exe
+E:\5 semestre\Modelado\3P\MapasKinect\MapKinectApp\obj\Debug\MapKinectApp.pdb
